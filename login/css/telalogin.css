@@ -1,0 +1,47 @@
+div#telalogin{
+    position: absolute;top: 50%; left: 50%;transform: translate(-50%, -50%);
+    width: 30%;
+    height: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgb(247, 247, 247);
+}
+
+div#signin {
+    height: 10%;
+}
+div#signin button{
+    height: 80%;
+    width: 30%;
+    cursor: pointer;
+    background-color: #03a8b4;
+    color: white;
+    font-family: "Kanit", sans-serif;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: transparent;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+div#signin button:hover{
+    background-color: #06838b;
+    transform: scale(1.05);
+}
+div#novaconta button{
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+    font-family: "Kanit", sans-serif;
+    font-size: 0.9rem;
+    text-decoration: underline;
+}
+div#novaconta button:hover{
+    color: gray;
+}
+div#email{
+    height: 10%;
+}
+div#password {
+    height: 10%;
+}

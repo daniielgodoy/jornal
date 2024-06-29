@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+div#rodape {
+    position: absolute; top: 200%;
+    width: 100%; /* Largura */
+    height: 30%; /* Altura */
+    background-color: rgb(200, 200, 200)  
+}
+
+#logos{
+    position: relative;
+    float: left;
+    width: 20%;
+    height: 100%;
+    /*background-color: aqua;*/
+
+}
+#logos img{
+    width: 70%;
+}
+#textos{
+    position: relative;
+    float: left;
+    width: 60%;
+    height: 80%;
+   /* background-color: black; */
+    
+}
+#redes{
+    position: relative;
+    float: left;
+    width: 20%;
+    height: 80%;
+   /* background-color: greenyellow; */
+}
+#direitos{
+    position: absolute;top: 90%;left: 50%;transform: translate(-50%, -50%);
+    width: 25%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: yellow;*/
+    
+}
+.centralizar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.redescentro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.redescentro div{
+    margin-left: 5%;
+}
+.color a{
+    color: black;
+    text-decoration:none;
+    
+}

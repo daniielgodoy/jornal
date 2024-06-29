@@ -1,0 +1,39 @@
+div#navbar-topo{
+    position: absolute;
+    width: 100%; /* largura*/
+    height: 15%; /* altura*/
+    background-color: aqua;
+    z-index: 100;
+}
+div#textos1{
+    position:relative;
+    float: left;
+    width: 51%;
+    height: 20%;
+    margin-left: 22%;
+    margin-right: 25%;
+    margin-top: 3%; 
+    font-size: 40PX;
+}
+div#textos2{
+    position: relative;
+    float: left;
+    width: 60%;
+    height: 70%;
+    margin-left: 20%;
+    
+    font-size: 18px;
+    background-color: rgb(225,225,225);
+}
+div#body{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.centralizar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,107 @@
+div#carousel {
+    position: absolute;top: 50%; left: 50%;transform: translate(-50%, -50%);
+    width: 60%;
+    height: 80%;
+    float: left;
+}
+
+.fotos {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+}
+
+.fotos div {
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9));
+    transition: 0.3s;
+
+}
+
+.fotos div:hover img {
+    transform: scale(1.1);
+}
+
+.fotos img {
+    height: 100%;
+    width: auto;
+    transition: 0.3s;
+}
+
+.fotos p {
+    margin-left: 3%;
+    margin-right: 3%;
+    font-size: 2rem;
+    color: white;
+}
+
+div#ft1 {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100.6%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+div#ft2 {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-left: 0.3%;
+    border-radius: 5px;
+}
+
+div#ft3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 0.3%;
+    border-radius: 5px;
+}
+
+div#txt1 {
+    position: absolute;
+    bottom: 0;
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+div#txt2 {
+    position: absolute;
+    bottom: 0;
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+div#txt3 {
+    position: absolute;
+    bottom: 0;
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}

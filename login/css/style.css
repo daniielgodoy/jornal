@@ -1,0 +1,58 @@
+div#body {
+    position: absolute; top: 0%; left: 0%;
+    width: 100%;
+    height: 100%;
+}
+.textos {
+    position: relative; float: left;
+    width: 100%;
+    height: 70%;
+    background-color: rgb(247, 247, 247);
+}
+.textos div {
+    position: relative; float: left;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1%;
+}
+.textos input{
+    width: 70%;
+    height: 65%;
+    border-radius: 5px;
+    border: transparent;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 1);
+    background-color: rgb(247, 247, 247);
+    font-family: "Kanit", sans-serif;
+    font-size: 0.9rem;
+}
+.textos i{
+    margin-left: 3%;
+    margin-right: 3%;
+    cursor: pointer;
+}
+.textos a{
+    font-family: "Kanit", sans-serif;
+    font-size: 0.9rem;
+    color: black;
+}
+.textos p{
+    font-family: "Kanit", sans-serif;
+    font-size: 0.9rem;
+    color: black;
+    cursor: default;
+}
+.textos h2{
+    font-family: "Kanit", sans-serif;
+    font-size: 2rem;
+    color: black;
+    cursor: default;
+}
+
+.textos i:hover{
+    color: gray;
+}
+.textos a:hover{
+    color: gray;
+}
