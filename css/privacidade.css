@@ -1,9 +1,3 @@
-div#navbar-topo{
-    position: absolute;
-    width: 100%; /* largura*/
-    height: 15%; /* altura*/
-    z-index: 100;
-}
 div#textoss1{
     position:relative;
     float: left;

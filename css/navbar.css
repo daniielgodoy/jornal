@@ -64,6 +64,9 @@ div#teams {
     justify-content: center;
     align-items: center;
 }
+.navbar-itens input{
+    margin-top: 5%;
+}
 .navbar-itens button {
     position: absolute;
     top: 50%;

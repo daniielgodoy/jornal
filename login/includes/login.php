@@ -14,7 +14,7 @@
         $_SESSION['email'] = $_POST['campo_email'];
         $_SESSION['nivel'] = $row['nivel'];
         $_SESSION['assinante'] = $row['assinante'];
-
+        
         header('Location: ../../admin.php');
     } else {
         session_destroy();

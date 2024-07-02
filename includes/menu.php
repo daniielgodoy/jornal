@@ -43,7 +43,7 @@
     <div id="botao"><button id="subscribe-button">
 
             <div id="assinar"><i class="fa-solid fa-crown"></i>
-                Assine Já
+            <a href="includes/assinar.php">Assine Já</a>
             </div>
 
         </button>
@@ -51,4 +51,3 @@
     </div>
 
 </div>
-<button id="menu-toggle">Abrir Menu</button>

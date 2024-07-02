@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
 
 div#rodape {
-    position: absolute; top: 200%;
+    position: relative; float: left;
     width: 100%; /* Largura */
     height: 30%; /* Altura */
-    background-color: rgb(200, 200, 200)  
+    background-color: rgb(200, 200, 200);
 }
 
 #logos{

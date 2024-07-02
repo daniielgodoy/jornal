@@ -14,5 +14,6 @@
     <link rel="stylesheet" href="css/teams.css"> 
     <link rel="stylesheet" href="css/principios.css">
     <link rel="stylesheet" href="css/privacidade.css">
+    <link rel="stylesheet" href="css/noticias.css">
 </head>
 <script src="https://kit.fontawesome.com/86ee1c456e.js" crossorigin="anonymous"></script>

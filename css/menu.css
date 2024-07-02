@@ -23,6 +23,7 @@
 #menuzin li {
     margin: 20px 0;
     border-bottom: solid black 1px;
+    cursor: pointer;
 }
 
 #menuzin a {
@@ -204,4 +205,12 @@ body {
 
 .btn-secondary:hover {
     background-color: #4d4d4d;
+}
+
+#confirmation-message {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: green;
 }

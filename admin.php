@@ -4,9 +4,9 @@ require ('includes/mysqli.php');
 ?>
 
 <body>
-<?php
-        require ('includes/modals.php');
-        ?>
+    <?php
+    require ('includes/modals.php');
+    ?>
     <div id="body">
 
         <?php
@@ -15,9 +15,7 @@ require ('includes/mysqli.php');
         <?php
         require ('includes/carousel.php');
         ?>
-        <?php
-        require ('includes/rodape.php');
-        ?>
+
         <?php
         require ('includes/menu-admin.php');
         ?>
@@ -28,7 +26,11 @@ require ('includes/mysqli.php');
                 ?>
             </div>
         </div>
+        <?php
+        require ('includes/rodape.php');
+        ?>
     </div>
+
 </body>
 
 </html>

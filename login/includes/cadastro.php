@@ -14,8 +14,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
-        echo '<script>alert("Este e-mail já está registrado. Por favor, use outro e-mail.");</script>';
-        header('Location: ../index.php');
+        echo '<script>
+        alert("Este e-mail já está registrado. Por favor, use outro e-mail.");
+        window.location.href = "../index.php";
+    </script>';
 
     } else {
         $insertQuery = "INSERT INTO tbl_login (nome, sobrenome, email, senha, nivel, assinante)

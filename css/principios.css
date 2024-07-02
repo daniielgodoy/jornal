@@ -1,10 +1,4 @@
-div#navbar-topo{
-    position: absolute;
-    width: 100%; /* largura*/
-    height: 15%; /* altura*/
-    background-color: aqua;
-    z-index: 100;
-}
+
 div#textos1{
     position:relative;
     float: left;

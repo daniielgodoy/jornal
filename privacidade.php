@@ -6,6 +6,7 @@ require ('includes/header.php');
 <div id="body">
     <?php
     require ('includes/navbar.php');
+    require ('includes/menu.php')
 
     ?>
     <div id="textoss1" class="centralizar"> Aviso de Privacidade </div>

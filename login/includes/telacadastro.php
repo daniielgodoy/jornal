@@ -20,10 +20,6 @@
             <div id="password"><input type="password" name="password" id="password" placeholder="Password" required></div>
             <div id="signup"><button type="submit">Sign Up</button></div>
             <div id="enteraccount" onclick="enteraccount()"><button type="button">or enter in your account.</button></div>
-            <!-- Alerta de e-mail já registrado -->
-            <?php if (isset($alerta) && !empty($alerta)) : ?>
-                <div id="alerta" style="color: red;"><?php echo $alerta; ?></div>
-            <?php endif; ?>
         </div>
     </div>
 </form>
