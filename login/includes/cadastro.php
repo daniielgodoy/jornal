@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($stmt) {
             $stmt->bind_param("ssss", $nome, $sobrenome, $email, $password);
             if ($stmt->execute()) {
-                header('Location: ../../index.php');
+                header('Location: ../index.php');
             } else {
                 echo "Erro ao cadastrar: " . $stmt->error;
             }
