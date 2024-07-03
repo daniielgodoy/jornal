@@ -138,7 +138,6 @@ div#botao:hover #assinar {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
 }
 
 .form-container {
@@ -213,4 +212,10 @@ body {
     margin-top: 20px;
     font-size: 18px;
     color: green;
+}
+div#infos {
+    position: relative;
+    float: left;
+    font-size: 0.8rem;
+    color: #555555;
 }

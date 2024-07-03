@@ -40,14 +40,13 @@
             </div>
         </div>
     </ul>
-    <div id="botao"><button id="subscribe-button">
-
-            <div id="assinar"><i class="fa-solid fa-crown"></i>
-            <a href="includes/assinar.php">Assine Já</a>
+    <div id="botao">
+        <button id="subscribe-button">
+            <div id="assinar">
+                <i class="fa-solid fa-crown"></i>
+                
+                <a href="assinar.php">Assine Já</a>
             </div>
-
         </button>
-
     </div>
-
 </div>
