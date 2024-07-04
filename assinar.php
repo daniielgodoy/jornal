@@ -12,7 +12,7 @@ require ('includes/mysqli.php');
         require ('includes/menu.php');
         ?>
 
-        <div class="container">
+        <div class="containeraa">
             <div class="header">
                 <h1>GP News Premium</h1>
                 <p>Bem-vindo ao GP News Premium, onde a paixão pela Fórmula 1 está ao seu alcance!</p>
@@ -53,29 +53,28 @@ require ('includes/mysqli.php');
                         <p>Acesso ilimitado a todas as matérias e conteúdos exclusivos.</p>
                         <p>Participação em eventos mensais.</p>
                         <p>Atendimento prioritário ao assinante.</p>
-                        <div id="paypal-button-container-P-63W33769AM2102809M2CEEFQ"></div>
+                        <div id="paypal-button-container-P-2S759989LN8339420M2DQIKI"></div>
                         <script
-                            src="https://www.paypal.com/sdk/js?client-id=AYh9pZ74ZDDRa5kmq4YlFeU30xgr7JxXowaRCJCcOGMMZV8gNwQ2FUjLRdO4cPoGr6ib045m8tCdJmMt&vault=true&intent=subscription"
+                            src="https://www.paypal.com/sdk/js?client-id=Af0foUI8AfADR5ZzI_Qsp_SWNCw3NgGEJGvKoEjuomxhxaQnN5NUdcMGJwuqGirhY5x4zBEWMbsDVG3p&vault=true&intent=subscription"
                             data-sdk-integration-source="button-factory"></script>
                         <script>
                             paypal.Buttons({
                                 style: {
                                     shape: 'rect',
-                                    color: 'gold',
+                                    color: 'black',
                                     layout: 'vertical',
                                     label: 'subscribe'
                                 },
                                 createSubscription: function (data, actions) {
                                     return actions.subscription.create({
                                         /* Creates the subscription */
-                                        plan_id: 'P-63W33769AM2102809M2CEEFQ'
+                                        plan_id: 'P-2S759989LN8339420M2DQIKI'
                                     });
                                 },
                                 onApprove: function (data, actions) {
                                     alert(data.subscriptionID); // You can add optional success message for the subscriber here
-                                    window.location('https://google.com')
                                 }
-                            }).render('#paypal-button-container-P-63W33769AM2102809M2CEEFQ'); // Renders the PayPal button
+                            }).render('#paypal-button-container-P-2S759989LN8339420M2DQIKI'); // Renders the PayPal button
                         </script>
                     </div>
                 </div>
@@ -92,23 +91,23 @@ require ('includes/mysqli.php');
                 var nome = "<?php echo $_SESSION['nome']; ?>";
                 var sobrenome = "<?php echo $_SESSION['sobrenome']; ?>";
                 linhaDiv.innerHTML = `
-                            <div>
-                                <i class="fa-regular fa-circle-user fa-3x"></i>
-                                <div id="acesso">${nome} ${sobrenome}</div>
-                            </div>
-                            <div id="perfil-logout">
-                                <a href="includes/perfil.php">Perfil</a> |
-                                <a href="includes/logout.php">Logout</a>
-                            </div>
-                        `;
+                                    <div>
+                                        <i class="fa-regular fa-circle-user fa-3x"></i>
+                                        <div id="acesso">${nome} ${sobrenome}</div>
+                                    </div>
+                                    <div id="perfil-logout">
+                                        <a href="includes/perfil.php">Perfil</a> |
+                                        <a href="includes/logout.php">Logout</a>
+                                    </div>
+                                `;
             <?php else: ?>
                 linhaDiv.innerHTML = `
-                            <a href="login/index.php">
-                                <i class="fa-regular fa-circle-user fa-3x"></i>
-                                <div id="acesso">Acesse sua Conta</div>
-                                <div id="gratis">ou crie uma grátis</div>
-                            </a>
-                        `;
+                                    <a href="login/index.php">
+                                        <i class="fa-regular fa-circle-user fa-3x"></i>
+                                        <div id="acesso">Acesse sua Conta</div>
+                                        <div id="gratis">ou crie uma grátis</div>
+                                    </a>
+                                `;
             <?php endif; ?>
         });
     </script>

@@ -6,6 +6,7 @@ if (!isset($_SESSION['assinante']) || $_SESSION['assinante'] == 0) {
         document.addEventListener('DOMContentLoaded', function() {
             var modal = document.getElementById('assinanteModal');
             modal.style.display = 'block';
+            document.body.classList.add('no-scroll');
         });
     </script>";
 }

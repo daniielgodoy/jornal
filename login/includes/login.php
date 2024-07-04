@@ -13,6 +13,8 @@ if ($result->num_rows > 0) {
     $_SESSION['email'] = $_POST['campo_email'];
     $_SESSION['nivel'] = $row['nivel'];
     $_SESSION['assinante'] = $row['assinante'];
+    $_SESSION['senha'] = $row['senha'];
+
 
     if ($row['nivel'] != 'User') {
         header('Location: ../../admin.php');
