@@ -2,8 +2,8 @@
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     include 'mysqli.php';
 
-    $nome = $_POST['nome'];
-    $sobrenome = $_POST['sobrenome'];
+    $nome = ucfirst(strtolower($_POST['nome']));
+    $sobrenome = ucfirst(strtolower($_POST['sobrenome']));
     $email = $_POST['email'];
     $password = $_POST['password'];
 
@@ -18,7 +18,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         alert("Este e-mail já está registrado. Por favor, use outro e-mail.");
         window.location.href = "../index.php";
     </script>';
-
     } else {
         $insertQuery = "INSERT INTO tbl_login (nome, sobrenome, email, senha, nivel, assinante)
                         VALUES (?, ?, ?, ?, 'User', 0)";
@@ -26,7 +25,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($stmt) {
             $stmt->bind_param("ssss", $nome, $sobrenome, $email, $password);
             if ($stmt->execute()) {
-                header('Location: ../index.php');
+                echo '<script>
+                alert("Cadastro realizado com sucesso!");
+                window.location.href = "../index.php";
+            </script>';
             } else {
                 echo "Erro ao cadastrar: " . $stmt->error;
             }

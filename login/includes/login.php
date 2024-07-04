@@ -14,7 +14,11 @@ if ($result->num_rows > 0) {
     $_SESSION['nivel'] = $row['nivel'];
     $_SESSION['assinante'] = $row['assinante'];
 
-    header('Location: ../../index.php?nome=' . $row['nome'] . '&sobrenome=' . $row['sobrenome']);
+    if ($row['nivel'] != 'User') {
+        header('Location: ../../admin.php');
+    } else {
+        header('Location: ../../index.php?nome=' . $row['nome'] . '&sobrenome=' . $row['sobrenome']);
+    }
 } else {
     session_destroy();
     header('Location: ../index.php');

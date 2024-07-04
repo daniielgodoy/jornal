@@ -27,6 +27,7 @@ div#logo::after {
 }
 div#logo img {
     height: 100%;
+    cursor: pointer;
 }
 div#menu {
     position: relative;

@@ -40,13 +40,24 @@
             </div>
         </div>
     </ul>
+    <?php if (!isset($_SESSION['logado']) || (isset($_SESSION['assinante']) && $_SESSION['assinante'] != 1)): ?>
     <div id="botao">
         <button id="subscribe-button">
             <div id="assinar">
                 <i class="fa-solid fa-crown"></i>
-                
-                <a href="assinar.php">Assine Já</a>
+                Assine Já
             </div>
         </button>
     </div>
+    <?php endif; ?>
 </div>
+
+<script>
+    document.getElementById('subscribe-button')?.addEventListener('click', function() {
+        <?php if (isset($_SESSION['logado']) && $_SESSION['logado'] == 'Ok'): ?>
+            window.location.href = 'assinar.php';
+        <?php else: ?>
+            window.location.href = 'login/index.php';
+        <?php endif; ?>
+    });
+</script>
