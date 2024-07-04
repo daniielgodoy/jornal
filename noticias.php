@@ -5,6 +5,9 @@ require('includes/mysqli.php');
 ?>
 
 <body>
+    <?php
+    require('includes/verificaassinatura.php');
+    ?>
     <div id="body">
         <?php
         require('includes/navbar.php');
