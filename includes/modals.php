@@ -56,62 +56,111 @@
         <span class="close">&times;</span>
         <h2>Gerenciar Funcionário</h2>
         <table class="table">
-    <thead>
-        <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Nome</th>
-            <th scope="col">Email</th>
-            <th scope="col">Nível de Acesso</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php
-        if (isset($_SESSION['id'])) {
-            $id = $mysqli->real_escape_string($_SESSION['id']);
-            $result = $mysqli->query("SELECT id, nome, sobrenome, email, nivel, assinante FROM tbl_login WHERE id != $id ORDER BY id ASC");
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Nível de Acesso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                if (isset($_SESSION['id'])) {
+                    $id = $mysqli->real_escape_string($_SESSION['id']);
+                    $result = $mysqli->query("SELECT id, nome, sobrenome, email, nivel, assinante FROM tbl_login WHERE id != $id ORDER BY id ASC");
 
-            if ($result) {
-                while ($row = $result->fetch_assoc()) {
-                    echo '<tr>';
-                    echo '    <th scope="row">' . $row['id'] . '</th>';
-                    echo '    <td>' . $row['nome'] . ' ' . $row['sobrenome'] . '</td>';
-                    echo '    <td>' . $row['email'] . '</td>';
-                    echo '    <td>';
+                    if ($result) {
+                        while ($row = $result->fetch_assoc()) {
+                            echo '<tr>';
+                            echo '    <th scope="row">' . $row['id'] . '</th>';
+                            echo '    <td>' . $row['nome'] . ' ' . $row['sobrenome'] . '</td>';
+                            echo '    <td>' . $row['email'] . '</td>';
+                            echo '    <td>';
 
-                    if ($row['nivel'] != 'Admin') {
-                        echo '        <form action="includes/update-nivel.php" method="POST">';
-                        echo '            <input type="hidden" name="id" value="' . $row['id'] . '">';
-                        echo '            <select name="nivel" onchange="this.form.submit()">';
-                        echo '                <option value="User" ' . ($row['nivel'] == 'User' ? 'selected' : '') . '>User</option>';
-                        echo '                <option value="Jornalista" ' . ($row['nivel'] == 'Jornalista' ? 'selected' : '') . '>Jornalista</option>';
-                        echo '            </select>';
+                            if ($row['nivel'] != 'Admin') {
+                                echo '        <form action="includes/update-nivel.php" method="POST">';
+                                echo '            <input type="hidden" name="id" value="' . $row['id'] . '">';
+                                echo '            <select name="nivel" onchange="this.form.submit()">';
+                                echo '                <option value="User" ' . ($row['nivel'] == 'User' ? 'selected' : '') . '>User</option>';
+                                echo '                <option value="Jornalista" ' . ($row['nivel'] == 'Jornalista' ? 'selected' : '') . '>Jornalista</option>';
+                                echo '            </select>';
 
-                        if ($row['nivel'] == 'Jornalista') {
-                            echo '            <input type="hidden" name="assinante" value="1">';
-                        } else {
-                            echo '            <input type="hidden" name="assinante" value="0">';
+                                if ($row['nivel'] == 'Jornalista') {
+                                    echo '            <input type="hidden" name="assinante" value="1">';
+                                } else {
+                                    echo '            <input type="hidden" name="assinante" value="0">';
+                                }
+
+                                echo '        </form>';
+                            } else {
+                                echo $row['nivel'];
+                            }
+
+                            echo '    </td>';
+                            echo '</tr>';
                         }
-
-                        echo '        </form>';
                     } else {
-                        echo $row['nivel'];
+                        echo 'Erro na consulta: ' . $mysqli->error;
                     }
-
-                    echo '    </td>';
-                    echo '</tr>';
+                } else {
+                    echo 'ID de sessão não encontrado.';
                 }
-            } else {
-                echo 'Erro na consulta: ' . $mysqli->error;
-            }
-        } else {
-            echo 'ID de sessão não encontrado.';
-        }
-        ?>
-    </tbody>
-</table>
+                ?>
+            </tbody>
+        </table>
 
 
 
 
+    </div>
+</div>
+
+
+
+
+
+<div id="editNewsModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeEditNewsModal()">&times;</span>
+        <h2>Editar Notícias</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Subtítulo</th>
+                    <th scope="col">Texto</th>
+                    <th scope="col">Texto</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                if (isset($_SESSION['id'])) {
+                    $id = $mysqli->real_escape_string($_SESSION['id']);
+                    $result = $mysqli->query("SELECT id, titulo, subtitulo, texto, categoria, principal FROM tbl_noticias WHERE id != $id ORDER BY id ASC");
+
+                    if ($result) {
+                        while ($row = $result->fetch_assoc()) {
+                            echo '<tr>';
+                            echo '    <th scope="row">' . $row['id'] . '</th>';
+                            echo '    <td>' . $row['titulo'] . '</td>';
+                            echo '    <td>' . $row['subtitulo'] . '</td>';
+                            echo '    <td>' . $row['texto'] . '</td>';
+                            echo '    <td>' . $row['categoria'] . '</td>';
+                            echo '    <td>' . $row['principal'] . '</td>';
+                            echo '    <td><a href="includes/editar_noticia.php?id=' . $row['id'] . '">Editar</a></td>'; // Botão Editar que leva para a página de edição
+                            echo '   </tr>';
+                        }
+                    } else {
+                        echo 'Erro na consulta: ' . $mysqli->error;
+                    }
+                } else {
+                    echo 'ID de sessão não encontrado.';
+                }
+                ?>
+
+            </tbody>
+        </table>
     </div>
 </div>

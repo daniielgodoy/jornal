@@ -10,7 +10,6 @@ require('includes/mysqli.php');
         require('includes/navbar.php');
         require('includes/menu.php'); 
         require('includes/perfil.php');
-        require('includes/rodape.php');
 
         ?>
     </div>

@@ -1,5 +1,4 @@
 <?php
-session_start();
 if (!isset($_SESSION['logado'])) {
     header('Location: login/index.php');
     exit;
@@ -12,13 +11,12 @@ if (!isset($_SESSION['logado'])) {
         document.getElementById('sobrenome').disabled = false;
         document.getElementById('email').disabled = false;
         document.getElementById('senha').disabled = false;
-        document.getElementById('confirma-senha-container').style.display = 'block'; // Show the confirm password container
-        document.getElementById('confirma-senha').value = ''; // Clear the confirm password field
-        document.getElementById('salvar').style.display = 'block'; // Show the save button
-        document.getElementById('editar').style.display = 'none'; // Hide the edit button
+        document.getElementById('confirma-senha-container').style.display = 'block'; 
+        document.getElementById('confirma-senha').value = ''; 
+        document.getElementById('salvar').style.display = 'block'; 
+        document.getElementById('editar').style.display = 'none'; 
     }
 </script>
-
 <div class="container">
     <h1>Perfil de <?php echo $_SESSION['nome'] . ' ' . $_SESSION['sobrenome']; ?></h1>
 

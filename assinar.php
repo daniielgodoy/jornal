@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 require ('includes/header.php');
 require ('includes/mysqli.php');
 ?>
@@ -72,9 +71,24 @@ require ('includes/mysqli.php');
                                     });
                                 },
                                 onApprove: function (data, actions) {
-                                    alert(data.subscriptionID); // You can add optional success message for the subscriber here
+                                    alert("Assinatura aprovada: " + data.subscriptionID); // Mensagem opcional de sucesso para o assinante
+
+                                    // Envia uma requisição POST para update-assinatura.php
+                                    fetch('includes/update-assinatura.php', {
+                                        method: 'POST',
+                                        headers: {
+                                            'Content-Type': 'application/json'
+                                        },
+                                        body: JSON.stringify({ subscriptionID: data.subscriptionID })
+                                    })
+                                    .then(response => response.text())
+                                    .then(result => {
+                                        console.log(result); // Exibe o resultado da atualização
+                                        window.location.href = 'index.php'; // Redireciona para a página de perfil
+                                    })
+                                    .catch(error => console.error('Erro:', error));
                                 }
-                            }).render('#paypal-button-container-P-2S759989LN8339420M2DQIKI'); // Renders the PayPal button
+                            }).render('#paypal-button-container-P-2S759989LN8339420M2DQIKI'); // Renderiza o botão do PayPal
                         </script>
                     </div>
                 </div>

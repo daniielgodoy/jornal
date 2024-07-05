@@ -26,3 +26,17 @@ if ($result->num_rows > 0) {
     header('Location: ../index.php');
 }
 ?>
+
+
+
+
+<?php
+
+
+$result = $mysqli->query("SELECT assinante FROM tbl_login WHERE id = '$id'");
+
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $_SESSION['assinante'] = $row['assinante'];
+}
+?>
