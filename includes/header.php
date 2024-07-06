@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/rodape.css">
     <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/teams.css"> 
     <link rel="stylesheet" href="css/principios.css">
     <link rel="stylesheet" href="css/privacidade.css">
     <link rel="stylesheet" href="css/noticias.css">

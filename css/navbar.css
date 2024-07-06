@@ -17,14 +17,6 @@ div#logo {
     align-items: center;
 }
 
-div#logo::after {
-    position: absolute; right: 1%;
-    content: "";
-    right: 0;
-    height: 50%;
-    width: 2px;
-    background-color: black;
-}
 div#logo img {
     height: 100%;
     cursor: pointer;
@@ -39,16 +31,12 @@ div#menu {
     margin-left: 5%;
 }
 div#barras {
-    position: absolute;
-    top: 30%;
-}
-div#teams {
-    position: relative;float: left;
-    display: flex;
+    position: relative; float: left;
+    width: 90%;
     height: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 1%;
 }
 .navbar-itens {
     position: relative;float: right;
@@ -66,16 +54,15 @@ div#teams {
     align-items: center;
 }
 .navbar-itens input{
-    margin-top: 5%;
+    margin-top: 7.5%;
+    height: 60%;
 }
 .navbar-itens button {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 90%;
     transform: translate(-50%, -50%);
     border: 1px solid rgba(0, 0, 0, 0);
     background-color: rgba(0, 0, 0, 0);
 }
-
-
 

@@ -2,36 +2,36 @@
 // Verifica se o formulário foi submetido
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
-    // Conexão com o banco de dados (substitua com suas credenciais)
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "bd_jornal";
+    // Incluir arquivo de conexão com o banco de dados
+    require('mysqli.php');
 
-    // Cria a conexão
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Verifica a conexão
-    if ($conn->connect_error) {
-        die("Falha na conexão com o banco de dados: " . $conn->connect_error);
+    // Função para limpar e validar os dados recebidos
+    function validar_dados($dados) {
+        // Implemente a validação dos dados conforme necessário
+        return htmlspecialchars(trim($dados));
     }
 
     // Variáveis vindas do formulário de edição
-    $id = $_POST['id']; // supondo que você passe o ID da notícia a ser editada
-    $titulo = $_POST['titulo'];
-    $texto = $_POST['texto'];
-    // ... outras variáveis que você queira editar
+    $id = validar_dados($_POST['id']); // ID da notícia a ser editada
+    $titulo = validar_dados($_POST['titulo']);
+    $subtitulo = validar_dados($_POST['subtitulo']);
+    $texto = validar_dados($_POST['texto']);
+    $categoria = validar_dados($_POST['categoria']);
+    $principal = validar_dados($_POST['principal']);
 
     // Query SQL para atualizar a notícia no banco de dados
-    $sql = "UPDATE tbl_noticias SET titulo = '$titulo', texto = '$texto' WHERE id = $id";
+    $sql = "UPDATE tbl_noticias SET titulo = ?, subtitulo = ?, texto = ?, categoria = ?, principal = ? WHERE id = ?";
+    $stmt = $mysqli->prepare($sql);
+    $stmt->bind_param("sssssi", $titulo, $subtitulo, $texto, $categoria, $principal, $id);
 
-    if ($conn->query($sql) === TRUE) {
-        echo "Notícia atualizada com sucesso!";
+    if ($stmt->execute()) {
+        header('Location: ../admin.php');
     } else {
-        echo "Erro ao atualizar notícia: " . $conn->error;
+        echo "Erro ao atualizar notícia: " . $stmt->error;
     }
 
-    $conn->close();
+    $stmt->close();
+    $mysqli->close();
 } else {
     echo "Erro: o formulário de edição não foi submetido.";
 }

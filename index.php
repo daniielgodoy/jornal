@@ -14,7 +14,13 @@ require('includes/mysqli.php');
 
         <div id="noticias">
             <div id="conteudo">
-                <?php require('includes/conteudo.php'); ?>
+                <?php 
+                // Capturando o campo de pesquisa, se existir
+                $campoPesquisa = isset($_GET['campo_pesquisa']) ? $mysqli->real_escape_string($_GET['campo_pesquisa']) : '';
+
+                // Incluindo o conteúdo com base no campo de pesquisa
+                require('includes/conteudo.php');
+                ?>
             </div>
         </div>
 

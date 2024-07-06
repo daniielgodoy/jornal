@@ -98,33 +98,7 @@ require ('includes/mysqli.php');
         <?php require ('includes/rodape.php'); ?>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var linhaDiv = document.getElementById('linha');
-            <?php if (isset($_SESSION['logado']) && $_SESSION['logado'] == 'Ok'): ?>
-                var nome = "<?php echo $_SESSION['nome']; ?>";
-                var sobrenome = "<?php echo $_SESSION['sobrenome']; ?>";
-                linhaDiv.innerHTML = `
-                                    <div>
-                                        <i class="fa-regular fa-circle-user fa-3x"></i>
-                                        <div id="acesso">${nome} ${sobrenome}</div>
-                                    </div>
-                                    <div id="perfil-logout">
-                                        <a href="includes/perfil.php">Perfil</a> |
-                                        <a href="includes/logout.php">Logout</a>
-                                    </div>
-                                `;
-            <?php else: ?>
-                linhaDiv.innerHTML = `
-                                    <a href="login/index.php">
-                                        <i class="fa-regular fa-circle-user fa-3x"></i>
-                                        <div id="acesso">Acesse sua Conta</div>
-                                        <div id="gratis">ou crie uma grátis</div>
-                                    </a>
-                                `;
-            <?php endif; ?>
-        });
-    </script>
+
 </body>
 
 </html>

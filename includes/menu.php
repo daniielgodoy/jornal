@@ -11,33 +11,34 @@
             </a>
         </div>
         <div class="blocos">
-            <div id="bloquinho">
-                <li><a href="#link2">F1</a></li>
-            </div>
-            <div id="bloquinho">
-                <li><a href="#link3">F2</a></li>
-            </div>
-            <div id="bloquinho">
-                <li><a href="#link3">Fórmula E</a></li>
-            </div>
-            <div id="bloquinho">
-                <li><a href="#link3">Fórmula Indy</a></li>
-            </div>
-            <div id="bloquinho">
-                <li><a href="#link3">Fórmula Truck</a></li>
-            </div>
-            <div id="bloquinho">
-                <li><a href="#link3">MotoGP</a></li>
-            </div>
-            <div id="bloquinho">
-                <li><a href="#link3">Nascar</a></li>
-            </div>
-            <div id="bloquinho">
-                <li><a href="#link3">Ralis</a></li>
-            </div>
-            <div id="bloquinho">
-                <li><a href="#link3">Stock Car</a></li>
-            </div>
+        <div class="bloquinho">
+    <li><a href="index.php?categoria=F1">F1</a></li>
+</div>
+<div class="bloquinho">
+    <li><a href="index.php?categoria=F2">F2</a></li>
+</div>
+<div class="bloquinho">
+    <li><a href="index.php?categoria=Fórmula E">Fórmula E</a></li>
+</div>
+<div class="bloquinho">
+    <li><a href="index.php?categoria=Fórmula Indy">Fórmula Indy</a></li>
+</div>
+<div class="bloquinho">
+    <li><a href="index.php?categoria=Fórmula Truck">Fórmula Truck</a></li>
+</div>
+<div class="bloquinho">
+    <li><a href="index.php?categoria=MotoGP">MotoGP</a></li>
+</div>
+<div class="bloquinho">
+    <li><a href="index.php?categoria=Nascar">Nascar</a></li>
+</div>
+<div class="bloquinho">
+    <li><a href="index.php?categoria=Ralis">Ralis</a></li>
+</div>
+<div class="bloquinho">
+    <li><a href="index.php?categoria=Stock Car">Stock Car</a></li>
+</div>
+
         </div>
     </ul>
     <?php if (!isset($_SESSION['logado']) || (isset($_SESSION['assinante']) && $_SESSION['assinante'] != 1)): ?>
