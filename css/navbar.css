@@ -59,10 +59,22 @@ div#barras {
 }
 .navbar-itens button {
     position: absolute;
-    top: 55%;
-    left: 90%;
+    top: 50%;
+    left: 85%;
     transform: translate(-50%, -50%);
     border: 1px solid rgba(0, 0, 0, 0);
     background-color: rgba(0, 0, 0, 0);
 }
 
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+    div#logo {
+        margin-left: 10%;
+}
+.navbar-itens {
+    position: relative;float: right;
+    width: 70%;
+    height: 100%;
+    margin-right: 15%;
+    margin-top: -17.5%;
+}
+}

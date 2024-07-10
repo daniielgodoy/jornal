@@ -5,10 +5,9 @@
    </div>
 
    <div id="textos" class="centralizar">
-   <div id="principios" class="color"> <a href="principios.php"> Princípios editoriais | </a> </div> 
-   <div id="politica" class="color"> <a href="privacidade.php"> Politica de privacidade | </a> </div> 
-   <div id="conta" class="color"> <a href="conta.php"> Minha conta | </a> </div> 
-   <div id="anuncie" class="color"> <a href="anuncie.php"> Anuncie conosco | </a></div> 
+   <div id="principios" class="color"> <a href="principios.php"> Princípios editoriais | </a> </div> 
+   <div id="politica" class="color"> <a href="privacidade.php"> Politica de privacidade | </a> </div> 
+   <div id="conta" class="color"> <a href="pageperfil.php"> Minha conta</a> </div> 
    </div>
 
    <div id="redes" class="redescentro">

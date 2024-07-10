@@ -108,4 +108,16 @@ div#txt3 {
     justify-content: center;
     align-items: center;
     background: rgba(0, 0, 0, 0.5);
+} 
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+    div#ft2 {
+        display: none;
+
+    }
+    div#ft3 {
+        display: none;
+    }
+    div#ft1 {
+    width: 100%;
+    }
 }

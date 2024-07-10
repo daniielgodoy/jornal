@@ -2,6 +2,8 @@
 session_start();
 require('includes/header.php');
 require('includes/mysqli.php');
+require('includes/valida.php');
+
 ?>
 
 <body>
